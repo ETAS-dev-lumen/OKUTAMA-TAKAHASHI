@@ -2,16 +2,26 @@
 feather.replace();
 
 const swiper = new Swiper('.p-hero', {
-  slidesPerView: 'auto',
-  spaceBetween: 25,
-  centeredSlides: true,
+
   loop: true,
   speed: 800,
 
   autoplay: {
-    delay: 3000,
+    delay: 1500,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 0,
+  centeredSlides: false,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 25,
+      centeredSlides: true,
+    },
   },
 
   navigation: {

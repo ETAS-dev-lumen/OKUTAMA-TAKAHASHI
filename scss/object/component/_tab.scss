@@ -1,6 +1,11 @@
 @use "../../foundation/variable" as v;
 
 .c-tab {
+  &__area {
+    width: var(--content-width);
+    z-index: 1;
+  }
+
   &__container {
     width: 100%;
     margin-top: 20px;
@@ -46,5 +51,5 @@
     to {
       opacity: 1;
     }
-    }
+  }
 }

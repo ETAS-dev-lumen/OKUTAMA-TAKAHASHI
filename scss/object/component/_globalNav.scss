@@ -1,6 +1,11 @@
 @use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
 
 .c-globalNav {
+  @include m.sp {
+    display: none;
+  }
+
   &__list {
     display: flex;
     align-items: center;

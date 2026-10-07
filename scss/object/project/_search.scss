@@ -1,8 +1,24 @@
+@use "../../foundation/mixin" as m;
+
 .p-search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+  @include m.sp {
+    padding: 0 20px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+
+    @include m.sp {
+      flex-wrap: wrap;
+      justify-content: left;
+      gap: 10px;
+    }
+  }
 
   &__form {
     position: relative;

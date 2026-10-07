@@ -1,6 +1,12 @@
+@use "../../foundation/mixin" as m;
+
 .p-header {
   &__links {
     display: flex;
+
+    @include m.sp {
+      display: none;
+    }
   }
 
   &__utility {

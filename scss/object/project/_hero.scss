@@ -1,38 +1,32 @@
 @use "../../foundation/variable" as v;
-
-.p-hero-wrap {
-  position: relative;
-  width: 100vw;
-  overflow: hidden;
-}
+@use "../../foundation/mixin" as m;
 
 .p-hero {
   position: relative;
   width: 100%;
-}
-
-.p-hero.swiper {
-  overflow: visible;
-}
-
-.p-hero .swiper-wrapper {
-  align-items: center;
+  overflow: hidden;
 }
 
 .p-hero .swiper-slide {
   width: 473px;
   flex-shrink: 0;
+
+  @include m.sp {
+    width: 100%;
+  }
 }
 
 .p-hero .swiper-slide img {
   display: block;
-  width: 473px;
-  height: 318px;
   object-fit: cover;
+
+  @include m.sp {
+    width: 100%;
+  }
 }
 
-.p-hero-wrap .swiper-button-prev,
-.p-hero-wrap .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -42,20 +36,24 @@
   background: transparent;
   border: none;
   padding: 0;
+
+  @include m.sp {
+    display: none;
+  }
 }
 
 /* Swiperデフォルト矢印を消す */
-.p-hero-wrap .swiper-button-prev::after,
-.p-hero-wrap .swiper-button-next::after {
+.swiper-button-prev::after,
+.swiper-button-next::after {
   display: none;
 }
 
-.p-hero-wrap .swiper-navigation-icon {
+.swiper-navigation-icon {
   display: none;
 }
 
-.p-hero-wrap .swiper-button-prev::before,
-.p-hero-wrap .swiper-button-next::before {
+.swiper-button-prev::before,
+.swiper-button-next::before {
   content: '';
   display: block;
   width: 100%;
@@ -65,7 +63,7 @@
 }
 
 /* 左 */
-.p-hero-wrap .swiper-button-prev {
+.p-hero .swiper-button-prev {
   left: 50%;
   transform: translate(-50%, -50%);
   margin-left: -243px;
@@ -76,7 +74,7 @@
 }
 
 /* 右 */
-.p-hero-wrap .swiper-button-next {
+.p-hero .swiper-button-next {
   left: 50%;
   transform: translate(-50%, -50%);
   margin-left: 243px;
@@ -86,14 +84,16 @@
   }
 }
 
-.p-hero-wrap .swiper-pagination {
+.p-hero .swiper-pagination {
   position: relative;
-  margin-top: 17px;
-  padding: 0;
+  height: auto;
+  padding: 10px 0;
+  bottom: auto;
   text-align: center;
+  line-height: 0;
 }
 
-.p-hero-wrap .swiper-pagination-bullet {
+.p-hero .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   margin-left: 0 !important;
@@ -108,6 +108,6 @@
   }
 }
 
-.p-hero-wrap .swiper-pagination-bullet-active {
+.p-hero .swiper-pagination-bullet-active {
   background: v.$color-main;
 }

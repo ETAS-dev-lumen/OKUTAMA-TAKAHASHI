@@ -1,27 +1,35 @@
+@use "../../foundation/mixin" as m;
+
 .p-bg__blue {
   background-color: #a2d6e4;
   overflow: hidden;
+  padding-top: 20px;
+
+  @include m.sp {
+    padding-top: 15px;
+  }
 }
 
 .p-bg__decoWrap {
-  width: 1000px;
+  width: var(--content-width);
   position: relative;
-  margin: 0 auto;
+  margin-inline: auto;
   pointer-events: none;
+  position: relative;
 }
 
 .p-bg__white {
   position: relative;
   background-color: #fff;
   padding-bottom: 190px;
-  // overflow: hidden;
+  overflow-x: clip;
 
   &::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 150px;
-    top: -185px;
+    top: -183px;
     left: 0;
     background-color: #FFF;
     clip-path: polygon(0 0, 100% 100%, 0 100%);
@@ -37,7 +45,7 @@
     position: absolute;
     width: 100%;
     height: 150px;
-    top: -220px;
+    top: -219px;
     left: 0;
     background-color: #FFF;
     clip-path: polygon(0 100%, 100% 0%, 100% 100%);
@@ -45,92 +53,188 @@
 }
 
 .p-bg__deco {
-  &--1 {
+  &--cloudWhite {
     width: 460px;
     position: absolute;
-    top: 155px;
-    left: -140px;
+    top: -43px;
+    left: -150px;
     object-fit: cover;
   }
 
-  &--2 {
+  &--sun {
     width: 248px;
     position: absolute;
     top: -45px;
-    right: -140px;
+    right: -145px;
     object-fit: cover;
   }
 
-  &--3 {
+  &--plain {
     height: 125px;
     position: absolute;
-    top: 700px;
-    left: -350px;
+    top: 40px;
+    left: -340px;
     object-fit: cover;
   }
 
-  &--4 {
+  &--cloudDot01 {
     width: 442px;
     position: absolute;
-    top: 1255px;
-    left: 455px;
+    top: 181px;
+    right: 120px;
     object-fit: cover;
   }
 
-  &--5 {
+  &--cloudRain {
     width: 514px;
     position: absolute;
-    top: 1090px;
-    left: 740px;
+    top: 14px;
+    right: -250px;
     object-fit: cover;
   }
 
-  &--6 {
+  &--cloudDot02 {
     width: 684px;
     position: absolute;
     top: -85px;
-    left: -285px;
+    left: -308px;
     opacity: 0.5;
     object-fit: cover;
   }
 
-  &--7 {
+  &--cloudDot03 {
     width: 442px;
     position: absolute;
     top: 165px;
-    left: 855px;
-    opacity: 0.8;
+    right: -275px;
+    opacity: 0.5;
     object-fit: cover;
   }
 
-  &--8 {
+  // &--castle {
+  //   width: 1300px;
+  //   position: absolute;
+  //   bottom: -830px;
+  //   object-fit: cover;
+  // }
+
+  &--castle {
     width: 1300px;
     position: absolute;
-    bottom: -884px;
+    top: -400px;
     object-fit: cover;
   }
 
-  &--9 {
+  &--tag {
     width: 48px;
     position: absolute;
-    bottom: 390px;
+    top: -20px;
     left: 400px;
     object-fit: cover;
   }
 
-  &--10 {
+  &--cloudWhite02 {
     width: 600px;
     position: absolute;
-    bottom: -60px;
+    bottom: -380px;
     left: -300px;
     object-fit: cover;
   }
 
-  &--11 {
+  &--cloudDot04 {
     width: 496px;
     position: absolute;
-    bottom: 133px;
-    right: -200px;
+    bottom: -200px;
+    right: -250px;
     object-fit: cover;
   }
+
+  // &--1 {
+  //   width: 460px;
+  //   position: absolute;
+  //   top: 155px;
+  //   left: -140px;
+  //   object-fit: cover;
+  // }
+
+  // &--2 {
+  //   width: 248px;
+  //   position: absolute;
+  //   top: -45px;
+  //   right: -140px;
+  //   object-fit: cover;
+  // }
+
+  // &--3 {
+  //   height: 125px;
+  //   position: absolute;
+  //   top: 700px;
+  //   left: -350px;
+  //   object-fit: cover;
+  // }
+
+  // &--4 {
+  //   width: 442px;
+  //   position: absolute;
+  //   top: 1255px;
+  //   left: 455px;
+  //   object-fit: cover;
+  // }
+
+  // &--5 {
+  //   width: 514px;
+  //   position: absolute;
+  //   top: 1090px;
+  //   left: 740px;
+  //   object-fit: cover;
+  // }
+
+  // &--6 {
+  //   width: 684px;
+  //   position: absolute;
+  //   top: -85px;
+  //   left: -285px;
+  //   opacity: 0.5;
+  //   object-fit: cover;
+  // }
+
+  // &--7 {
+  //   width: 442px;
+  //   position: absolute;
+  //   top: 165px;
+  //   left: 855px;
+  //   opacity: 0.8;
+  //   object-fit: cover;
+  // }
+
+  // &--8 {
+  //   width: 1300px;
+  //   position: absolute;
+  //   bottom: -884px;
+  //   object-fit: cover;
+  // }
+
+  // &--9 {
+  //   width: 48px;
+  //   position: absolute;
+  //   bottom: 390px;
+  //   left: 400px;
+  //   object-fit: cover;
+  // }
+
+  // &--10 {
+  //   width: 600px;
+  //   position: absolute;
+  //   bottom: -60px;
+  //   left: -300px;
+  //   object-fit: cover;
+  // }
+
+  // &--11 {
+  //   width: 496px;
+  //   position: absolute;
+  //   bottom: 133px;
+  //   right: -200px;
+  //   object-fit: cover;
+  // }
 }

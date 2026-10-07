@@ -9,7 +9,7 @@
 
   &__topInner {
     display: flex;
-    width: 1000px;
+    width: var(--content-width);
     align-items: center;
     gap: 40px;
   }

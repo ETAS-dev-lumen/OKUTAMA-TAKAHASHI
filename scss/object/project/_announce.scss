@@ -11,12 +11,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1000px;
+    width: var(--content-width);
   }
 
   &__tabs {
     display: flex;
-    width: 1000px;
+    width: var(--content-width);
     gap: 10px;
     border-bottom: 2px solid v.$color-main;
 
@@ -36,7 +36,7 @@
   }
 
   &__news {
-    width: 1000px;
+    width: var(--content-width);
   }
 
   &__newsItem {

@@ -1,5 +1,3 @@
-@use "../../foundation/variable" as v;
-
 .p-areaInfo {
   display: flex;
   flex-direction: column;
@@ -7,7 +5,7 @@
 
   &__cardList {
     display: grid;
-    width: 1000px;
+    width: var(--content-width);
     grid-template-columns: repeat(3, 1fr);
     gap: 45px;
     justify-content: center;

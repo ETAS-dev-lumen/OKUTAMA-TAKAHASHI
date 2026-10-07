@@ -1,13 +1,29 @@
 @use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
 
 .p-infoBar {
   display: flex;
   justify-content: center;
   align-items: center;
 
+  @include m.sp {
+    padding: 0 20px;
+  }
+
   &__inner {
+    display: flex;
+    width: var(--content-width);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    @include m.sp {
+      width: 100%;
+    }
+
     &--row {
       display: flex;
+      flex-wrap: wrap;
     }
   }
 
@@ -17,9 +33,18 @@
     align-items: center;
     gap: 15px;
 
+    @include m.sp {
+      margin-bottom: 5px;
+    }
+
     &--label {
       font-size: 17px;
       color: v.$color-textMain;
+      font-weight: bold;
+
+      @include m.sp {
+        font-size: 14px;
+      }
     }
 
     &--timeMain {
@@ -27,6 +52,10 @@
       font-size: 24px;
       font-weight: 900;
       color: v.$color-textMain;
+
+      @include m.sp {
+        font-size: 20px;
+      }
     }
   }
 }

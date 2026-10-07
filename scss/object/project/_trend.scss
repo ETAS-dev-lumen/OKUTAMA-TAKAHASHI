@@ -5,6 +5,11 @@
   padding: 90px 0 115px;
   background-color: #ffe03f;
 
+  &__top {
+    width: var(--content-width);
+    position: relative;
+  }
+
   &__swiper {
     width: 100%;
     overflow: hidden;

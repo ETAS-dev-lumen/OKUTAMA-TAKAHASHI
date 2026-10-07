@@ -9,7 +9,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1000px;
+    width: var(--content-width);
+    position: relative;
   }
 
   &__card {
@@ -17,7 +18,7 @@
   }
 
   &__card--tab {
-    width: 1000px;
+    width: var(--content-width);
     min-height: 45px;
     color: #FFF;
     font-weight: bold;
@@ -26,43 +27,5 @@
     padding: 11.2px;
     background-color: v.$color-main;
     border-radius: 10px 10px 0 0;
-  }
-
-  &__card--scroll {
-    width: 1000px;
-    overflow-x: auto;
-    padding-bottom: 25px;
-  }
-
-  &__cardList {
-    display: flex;
-    gap: 20px;
-    min-width: max-content;
-  }
-
-  &__cardItem {
-    flex-shrink: 0;
-  }
-
-  &__card {
-    display: flex;
-    width: 450px;
-    height: 185px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 5px 0 rgba(77, 77, 77, 0.3);
-    background: #F5F5F5;
-  }
-
-  &__imgWrap {
-    width: 153px;
-    height: 153px;
-  }
-
-  &__infoWrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
   }
 }
