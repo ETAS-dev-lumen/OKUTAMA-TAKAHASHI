@@ -132,6 +132,11 @@ a {
   padding-bottom: 25px;
   z-index: 1;
 }
+@media (max-width: 767px) {
+  .c-card__scroll {
+    width: 100%;
+  }
+}
 .c-card__scroll--tab {
   display: flex;
   gap: 25px;
@@ -521,6 +526,11 @@ svg.feather-map-pin {
   width: var(--content-width);
   z-index: 1;
 }
+@media (max-width: 767px) {
+  .c-tab__area {
+    width: 100%;
+  }
+}
 .c-tab__container {
   width: 100%;
   margin-top: 20px;
@@ -728,6 +738,12 @@ svg.feather-map-pin {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .p-event {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
 .p-event__top {
   display: flex;
   justify-content: space-between;
@@ -735,11 +751,22 @@ svg.feather-map-pin {
   width: var(--content-width);
   position: relative;
 }
+@media (max-width: 767px) {
+  .p-event__top {
+    width: 100%;
+  }
+}
 
 .p-newShop {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .p-newShop {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
 .p-newShop__top {
   display: flex;
@@ -747,6 +774,11 @@ svg.feather-map-pin {
   align-items: center;
   width: var(--content-width);
   position: relative;
+}
+@media (max-width: 767px) {
+  .p-newShop__top {
+    width: 100%;
+  }
 }
 .p-newShop__card {
   gap: 20px;
@@ -762,6 +794,11 @@ svg.feather-map-pin {
   background-color: #4b91ca;
   border-radius: 10px 10px 0 0;
 }
+@media (max-width: 767px) {
+  .p-newShop__card--tab {
+    width: 100%;
+  }
+}
 
 .p-popupShop {
   display: flex;
@@ -769,12 +806,23 @@ svg.feather-map-pin {
   align-items: center;
   padding-bottom: 147px;
 }
+@media (max-width: 767px) {
+  .p-popupShop {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
 .p-popupShop__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: var(--content-width);
   position: relative;
+}
+@media (max-width: 767px) {
+  .p-popupShop__top {
+    width: 100%;
+  }
 }
 
 .p-shopNews {
@@ -849,6 +897,7 @@ svg.feather-map-pin {
   align-items: center;
   padding: 90px 0 115px;
   background-color: #ffe03f;
+  overflow-x: clip;
 }
 .p-trend__top {
   width: var(--content-width);
@@ -994,6 +1043,12 @@ svg.feather-map-pin {
 @media (max-width: 767px) {
   .p-infoBar__time--timeMain {
     font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .p-infoBar__text {
+    font-size: 13px;
+    margin-left: 5px;
   }
 }
 

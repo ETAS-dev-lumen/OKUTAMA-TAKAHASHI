@@ -1,9 +1,14 @@
 @use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
 
 .c-tab {
   &__area {
     width: var(--content-width);
     z-index: 1;
+
+    @include m.sp {
+      width: 100%;
+    }
   }
 
   &__container {

@@ -4,6 +4,7 @@
   align-items: center;
   padding: 90px 0 115px;
   background-color: #ffe03f;
+  overflow-x: clip;
 
   &__top {
     width: var(--content-width);

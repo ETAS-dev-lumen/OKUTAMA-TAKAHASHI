@@ -58,4 +58,11 @@
       }
     }
   }
+
+  &__text {
+    @include m.sp {
+      font-size: 13px;
+      margin-left: 5px;
+    }
+  }
 }

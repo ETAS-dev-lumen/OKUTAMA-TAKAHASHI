@@ -1,7 +1,14 @@
+@use "../../foundation/mixin" as m;
+
 .p-event {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include m.sp {
+    width: 100%;
+    padding: 0 20px;
+  }
 
   &__top {
     display: flex;
@@ -9,5 +16,9 @@
     align-items: center;
     width: var(--content-width);
     position: relative;
+
+    @include m.sp {
+      width: 100%;
+    }
   }
 }

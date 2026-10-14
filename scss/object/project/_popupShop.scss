@@ -1,4 +1,6 @@
 @use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
 
 .p-popupShop {
   display: flex;
@@ -6,11 +8,20 @@
   align-items: center;
   padding-bottom: 147px;
 
+  @include m.sp {
+    width: 100%;
+    padding: 0 20px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: var(--content-width);
     position: relative;
+
+    @include m.sp {
+      width: 100%;
+    }
   }
 }
